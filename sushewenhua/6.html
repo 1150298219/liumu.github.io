@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>学习党的二十大</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+    }
+
+    header {
+      background-color: #F44336;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .slider {
+      max-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>学习党的二十大</h1>
+</header>
+<div class="slider">
+  <div class="slides">
+    <div class="slide">
+      <img src="https://picsum.photos/id/1015/600/400">
+    </div>
+    <div class="slide">
+      <img src="https://picsum.photos/id/1016/600/400">
+    </div>
+    <div class="slide">
+      <img src="https://picsum.photos/id/1018/600/400">
+    </div>
+  </div>
+  <div class="arrow prev">&lt;</div>
+  <div class="arrow next">&gt;</div>
+</div>
+<section>
+  <h2>党的二十大是什么？</h2>
+  <p>党的二十大，全称是中国共产党第二十次全国代表大会，是中国共产党的最高领导机关。第二十次全国代表大会于2002年11月8日至14日在北京举行，代表共产党员2300多万人。</p>
+  <h2>党的二十大的主要任务是什么？</h2>
+  <p>党的二十大的主要任务是，全面总结党在过去二十年的历史经验，深刻领会全面建设小康社会的战略全局，进一步明确中国特色社会主义事业的总目标和奋斗目标，确立党在新世纪的奋斗目标和奋斗方略，全面推进中国特色社
+</section>
+<script>
+  const slides = document.querySelector(".slides");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const slideWidth = slides.clientWidth;
+  let slideIndex = 0;
+
+  function showSlides() {
+    slides.style.transform = `translateX(${-slideWidth * slideIndex}px)`;
+  }
+
+  function handlePrev() {
+    if (slideIndex === 0) {
+      slideIndex = slides.children.length - 1;
+    } else {
+      slideIndex--;
+    }
+    showSlides();
+  }
+
+  function handleNext() {
+    if (slideIndex === slides.children.length - 1) {
+      slideIndex = 0;
+    } else {
+      slideIndex++;
+    }
+    showSlides();
+  }
+
+  prevBtn.addEventListener("click", handlePrev);
+  nextBtn.addEventListener("click", handleNext);
+</script>
+</body>

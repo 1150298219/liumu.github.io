@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>党的二十大</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #CC0000;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>党的二十大</h1>
+    <nav>
+        <ul>
+            <li><a href="#overview">概览</a></li>
+            <li><a href="#theme">主题</a></li>
+            <li><a href="#achievements">成就</a></li>
+            <li><a href="#leadership">领导班子</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="overview">
+        <h2>概览</h2>
+        <p>党的十九届五中全会于2020年10月26日至29日召开，全会审议通过了《中共中央关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议》等重要文件，并决定在2022年召开党的二十大。</p>
+        <p>党的二十大是中国共产党的全国代表大会，将审议和通过党的十四个五年规划，总结党的工作经验，选举新的中央领导机构等。</p>
+    </section>
+    <section id="theme">
+        <h2>主题</h2>
+        <p>党的二十大的主题是“全面建设社会主义现代化国家，开创中国特色社会主义新时代”。这个主题旨在指导中国在未来几年内实现现代化，并建设更加繁荣、稳定、和谐的社会。</p>
+    </section>
+    <section id="achievements">
+        <h2>成就</h2>
+        <p>自党的十九大以来，中国共产党在各方面取得了显著的成就。其中包括扶贫攻坚、疫情防控、改革开放、民族团结等方面的工作。</p>
+        <p>在扶贫攻坚方面，中国共产党提出了精准扶贫的方针，将全国贫困人口从2012年的9899万人减少到2019年的551万人，贫困发生率从2012年的10.2%下降到2019年的0.6%。</p>
+        <p>在疫情防控方面，中国共产党及时采取了有效的措施控制疫情的传播，有效遏制了疫
+            情蔓延的势头，并为全球抗击疫情提供了重要经验。</p>
+        <p>在改革开放方面，中国共产党推动了经济社会的快速发展，建立了现代市场经济体系，开展了一系列重大改革举措，加强了国家的竞争力和影响力。</p>
+        <p>在民族团结方面，中国共产党致力于推进民族和谐、多元共生的社会发展，建立了民族团结进步示范区和国家民族团结进步先进集体等机制，有效维护了国家统一和民族团结。</p>
+    </section>
+    <section id="leadership">
+        <h2>领导班子</h2>
+        <p>党的二十大将选举新的中央领导机构，这个领导班子将在未来几年内领导中国的工作。预计新的中央委员会将由约200名委员组成，其中包括若干名中央政治局常委、中央政治局委员和候补委员。</p>
+        <p>中央领导机构的选举是根据党内民主集中制的原则进行的。预计将有一些现任领导干部继续留任，同时也将有一些新面孔加入到中央领导班子中。</p>
+    </section>
+</main>
+<footer>
+    <p>© 2023 党的二十大</p>
+</footer>
+<script>
+    // 为导航栏链接添加点击事件监听器
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // 阻止默认的链接行为
+            const targetId = this.getAttribute('href'); // 获取目标部分的ID
+            const targetSection = document.querySelector(targetId); // 获取对应的元素
+            targetSection.scrollIntoView({ behavior: 'smooth' }); // 平滑滚动到目标部分
+        });
+    });
+
+</script>
+
+</body>
+</html>
